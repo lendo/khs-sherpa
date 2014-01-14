@@ -51,13 +51,13 @@ public class SherpaEndpoint implements ApplicationContextAware {
 	private ApplicationContext applicationContext;
 	
 	@RolesAllowed("SHERPA_ADMIN")
-	@Action(mapping = "/sherpa/admin/sessions")
+	@Action(mapping = "/admin/sessions")
 	public Object sessions(SessionTokenService service) {
 		return service.sessions();
 	}
 	
 	@RolesAllowed("SHERPA_ADMIN")
-	@Action(mapping = "/sherpa/admin/endpoints")
+	@Action(mapping = "/admin/endpoints")
 	public Map<String, String> endpoints() {
 		Map<String, String> map = new HashMap<String, String>();
 		
@@ -73,7 +73,7 @@ public class SherpaEndpoint implements ApplicationContextAware {
 	
 	@SuppressWarnings("unchecked")
 //	@RolesAllowed("SHERPA_ADMIN")
-	@Action(mapping = "/sherpa/admin/describe/{value}")
+	@Action(mapping = "/admin/describe/{value}")
 	public Object describe(@Param("value") String value) {
 		
 		List<Map<String, Object>> actions = new ArrayList<Map<String,Object>>();
