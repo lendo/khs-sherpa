@@ -16,5 +16,5 @@ package com.khs.sherpa.annotation;
  * limitations under the License.
  */
 public enum MethodRequest {
-	GET,PUT,POST,DELETE
+	HEAD,GET,PUT,POST,DELETE
 }
